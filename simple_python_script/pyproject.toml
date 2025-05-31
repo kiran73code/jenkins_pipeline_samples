@@ -1,0 +1,23 @@
+[project]
+name = "simple-python"
+version = "0.1.0"
+description = "Demo project for Jenkins pipeline build"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2.3",
+]
+[build-system]
+requires = [
+  "setuptools>=72.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where =["src"]
+include = ["simple_python*"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+]
