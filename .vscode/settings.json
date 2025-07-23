@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "simple_python_script"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

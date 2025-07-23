@@ -1,0 +1,15 @@
+**/.venv/
+**/dist/
+**/build/
+**/.coverage/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.tox/
+
+# Python bytecode
+**/*.pyc
+**/__pycache__/
+
+**/simple_python_project.egg-info/
+
+
