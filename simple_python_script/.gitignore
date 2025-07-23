@@ -36,6 +36,7 @@ ENV/
 htmlcov/
 .pytest_cache/
 .tox/
+test_reports/
 
 # Distribution
 dist/
