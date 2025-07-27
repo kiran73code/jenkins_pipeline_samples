@@ -18,6 +18,7 @@ pipeline {
         stage('UNIT TESTING STEP') {
             steps {
                 sh '''
+                    cd simple_python_script/
                     uv sync --all-extras
                     . .venv/bin/activate
                     pytest --cov=simple_python
