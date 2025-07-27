@@ -1,0 +1,17 @@
+# Ignore Python cache, test, build, and venv directories
+__pycache__/
+*.pyc
+*.pyo
+dist/
+build/
+.venv/
+venv/
+.env/
+.coverage
+*.egg-info/
+test_reports/
+jenkins_files/
+.gitignore/
+tests/
+test_reports/
+simple_python.egg-info/
