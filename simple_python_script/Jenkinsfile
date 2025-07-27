@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('BUILD STEP') {
+            steps {
+                sh '''
+                    cd simple_python_script/
+                    uv sync --all-extras
+                    source .venv/bin/activate
+                    uv build .
+
+                '''
+            }
+        }
+
+        stage('UNIT TESTING STEP') {
+            steps {
+                sh '''
+                    pytest --cov=simple_python \                                                                                                                      4 ↵
+                        --cov-report=xml:test_reports/coverage.xml \
+                        --cov-report=html:test_reports/htmlcov \
+                        --junitxml=test_reports/test-results.xml
+                '''
+            }
+        }
+
+        stage('Final Steps') {
+            steps {
+                sh '''
+                    echo "All Steps passed. You can now run your Python script in Docker."
+                  
+                '''
+            }
+        }
+    }
+}
