@@ -17,9 +17,9 @@ pipeline {
         stage('UNIT TESTING STEP') {
             steps {
                 sh '''
-                    pytest --cov=simple_python \                                                                                                                      4 ↵
-                        --cov-report=xml:test_reports/coverage.xml \
-                        --cov-report=html:test_reports/htmlcov \
+                    pytest --cov=simple_python
+                        --cov-report=xml:test_reports/coverage.xml
+                        --cov-report=html:test_reports/htmlcov
                         --junitxml=test_reports/test-results.xml
                 '''
             }
