@@ -21,10 +21,7 @@ pipeline {
                     cd simple_python_script/
                     uv sync --all-extras
                     . .venv/bin/activate
-                    pytest --cov=simple_python
-                        --cov-report=xml:test_reports/coverage.xml
-                        --cov-report=html:test_reports/htmlcov
-                        --junitxml=test_reports/test-results.xml
+                    pytest --cov=simple_python --cov-report=xml:test_reports/coverage.xml --cov-report=html:test_reports/htmlcov --junitxml=test_reports/test-results.xml
                 '''
             }
         }
