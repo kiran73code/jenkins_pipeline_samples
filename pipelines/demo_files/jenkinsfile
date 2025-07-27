@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Verify Python Installation') {
+            steps {
+                sh '''
+                    python3 --version
+                    uv --version
+
+                '''
+            }
+        }
+
+        stage('Verify Docker Install Engine on Ubuntu') {
+            steps {
+                sh '''
+                    docker --version
+                '''
+            }
+        }
+
+        stage('Final Steps') {
+            steps {
+                sh '''
+                    echo "All checks passed. You can now run your Python script in Docker."
+                  
+                '''
+            }
+        }
+    }
+}
