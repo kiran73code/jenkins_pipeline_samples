@@ -18,6 +18,7 @@ pipeline {
         stage('UNIT TESTING STEP') {
             steps {
                 sh '''
+                    uv sync --all-extras
                     . .venv/bin/activate
                     pytest --cov=simple_python
                         --cov-report=xml:test_reports/coverage.xml
